@@ -1,30 +1,34 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
-
+<html>
 <head>
-  <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
-  <title>ADC: My First Web App</title>
+    <title>ADC Individual Evaluation - REST API</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 50px auto; padding: 20px; }
+        h1 { color: #333; }
+        table { border-collapse: collapse; width: 100%; margin-top: 20px; }
+        th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+        th { background-color: #4285f4; color: white; }
+        tr:nth-child(even) { background-color: #f2f2f2; }
+        .endpoint { font-family: monospace; color: #d44; }
+    </style>
 </head>
-
 <body>
-  <h1>Welcome to this very simple web application!</h1>
-
-  <table>
-    <tr>
-      <td colspan="2" style="font-weight:bold;">Available Services:</td>
-    </tr>
-    <tr>
-      <td><a href='/rest/utils/hello'>Say Hello!</a></td>
-      <td>(greetings)</td>
-    </tr>
-    <tr>
-      <td><a href='/rest/utils/time'>What time is it?</a></td>
-      <td>(see server time)</td>
-    </tr>
-  </table>
+    <h1>ADC Individual Evaluation - REST API</h1>
+    <p>Cloud-enabled server component deployed on Google App Engine with Firestore in Datastore mode.</p>
+    
+    <h2>Available REST Endpoints (all POST)</h2>
+    <table>
+        <tr><th>Op</th><th>Endpoint</th><th>Description</th><th>Token?</th></tr>
+        <tr><td>Op1</td><td class="endpoint">/rest/createaccount</td><td>Create a user account</td><td>No</td></tr>
+        <tr><td>Op2</td><td class="endpoint">/rest/login</td><td>Authenticate user, create session</td><td>No</td></tr>
+        <tr><td>Op3</td><td class="endpoint">/rest/showusers</td><td>Show all registered users</td><td>Yes</td></tr>
+        <tr><td>Op4</td><td class="endpoint">/rest/deleteaccount</td><td>Delete an account</td><td>Yes</td></tr>
+        <tr><td>Op5</td><td class="endpoint">/rest/modaccount</td><td>Modify account attributes</td><td>Yes</td></tr>
+        <tr><td>Op6</td><td class="endpoint">/rest/showauthsessions</td><td>Show all authenticated sessions</td><td>Yes</td></tr>
+        <tr><td>Op7</td><td class="endpoint">/rest/showuserrole</td><td>Show role of a user</td><td>Yes</td></tr>
+        <tr><td>Op8</td><td class="endpoint">/rest/changeuserrole</td><td>Change role of a user</td><td>Yes</td></tr>
+        <tr><td>Op9</td><td class="endpoint">/rest/changeuserpwd</td><td>Change user password</td><td>Yes</td></tr>
+        <tr><td>Op10</td><td class="endpoint">/rest/logout</td><td>Logout from session</td><td>Yes</td></tr>
+    </table>
 </body>
-<footer>
-  Copyright: ADC-PEI, FCT NOVA 2026
-</footer>
-
 </html>
